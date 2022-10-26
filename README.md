@@ -1,6 +1,6 @@
 # speed 1
 
-##theme.liquid
+## theme.liquid
 ```
 {% comment %}
     {{ content_for_header }}
@@ -16,7 +16,7 @@
   
 ```
 
-##optimize-code.liquid
+## optimize-code.liquid
 ```
  <script type="text/javascript">
   var windowWidth,lazyLink,lazyImages,lazySource,lazyBackground,lazyIframe,lazyScripts,navigator_platform,lazyLoadedJS,src,style,datasrc,urls,analytics,s,x,i,j,flag;
@@ -123,7 +123,7 @@
 </script>
 ```
 
-#Speed2
+# Speed2
 ```
 {{ content_for_header | replace : "addEventListener('load'", "addEventListener('wnw_load'" | replace : "previewBarInjector.init();", "" | replace : 'DOMContentLoaded', 'wnw_load' | replace : 'defer="defer" src=', 'type="lazyload2" defer="defer" data-src=' }}
 

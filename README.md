@@ -1,3 +1,14 @@
+# CLS issue - set image width and height
+```
+<script>
+  const images = document.querySelectorAll('.rte--indented-images img')
+    images.forEach((image) => {
+     image.width = image.clientWidth;
+     image.height = image.clientHeight
+  });
+</script>
+```
+
 # speed 1
 
 ## theme.liquid

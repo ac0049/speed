@@ -1,3 +1,17 @@
+# CSS preload
+```
+<link rel="preload" href="{{ 'theme.css' | asset_url }}" as="style">
+<script>
+function onLoadStylesheet() {
+    var url = "{{ 'theme.css' | asset_url }}";
+    var link = document.querySelector('link[href="' + url + '"]');
+    link.loaded = true;
+    link.dispatchEvent(new Event('load'));
+}
+</script>
+
+<link rel="stylesheet" href="{{ 'theme.css' | asset_url }}" type="text/css" media="print" onload="this.media='all';onLoadStylesheet()">
+```
 # CLS issue - set image width and height
 ```
 <script>

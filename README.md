@@ -1,5 +1,11 @@
-# CSS preload
+# CSS preload used in theme(impluse)
 ```
+{{ 'theme.css' | asset_url | stylesheet_tag: preload: true }}
+<script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
+```
+# CSS preload 1
+```
+
 <link rel="preload" href="{{ 'theme.css' | asset_url }}" as="style">
 <script>
 function onLoadStylesheet() {

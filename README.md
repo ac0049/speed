@@ -1,5 +1,7 @@
 # CSS preload used in theme(impluse)
 ```
+<link rel="preload" as="style" href="{{ 'theme.css' | asset_url }}">
+or
 {{ 'theme.css' | asset_url | stylesheet_tag: preload: true }}
 <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
 ```
@@ -39,6 +41,7 @@ function onLoadStylesheet() {
   {{ content_for_header | replace : "addEventListener('load'", "addEventListener('wnw_load'" | replace : "previewBarInjector.init();", "" | replace : 'DOMContentLoaded', 'wnw_load' | replace : 'defer="defer" src=', 'type="lazyload2" defer="defer" data-src=' }}
   <script>var trekkie=[];trekkie.integrations=!0;</script>
   
+  <link rel="stylesheet" data-href="{{ 'theme.css' | asset_url }}" type="text/css">
   <script type="lazyload2" data-src="{{ 'custom.js' | asset_url }}" defer></script>
   
   ...

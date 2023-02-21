@@ -221,7 +221,7 @@ function onLoadStylesheet() {
     lazyLoadLink();
 
     j=0;
-    lazyScripts = document.getElementsByTagName("script");
+    lazyScripts = document.getElementsByTagName("script[type=lazyload2]");
     lazyLoadScripts();
     
     lazySource = document.querySelectorAll("source");

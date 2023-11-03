@@ -20,6 +20,11 @@ function onLoadStylesheet() {
 
 <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}" type="text/css" media="print" onload="this.media='all';onLoadStylesheet()">
 ```
+# JS preload
+```
+<link rel="preload" href="{{ 'theme.css' | asset_url }}" as="style">
+<link rel="preload" href="{{ 'modernizr-2.8.2.min.js' | asset_url  }}" as="script">
+```
 # CLS issue - set image width and height
 ```
 <script>

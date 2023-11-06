@@ -40,6 +40,7 @@ function onLoadStylesheet() {
 
 ## theme.liquid
 ```
+<!-- JS minifed file extension should be *.js not min.js -->
 {% comment %}
     {{ content_for_header }}
   {% endcomment %}

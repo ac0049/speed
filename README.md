@@ -49,6 +49,9 @@ function onLoadStylesheet() {
   
   <link rel="stylesheet" data-href="{{ 'theme.css' | asset_url }}" type="text/css">
   <script type="lazyload2" data-src="{{ 'custom.js' | asset_url }}" defer></script>
+<script type="lazyload2">
+....
+</script>
   
   ...
   {% render 'optimize-code' %}
